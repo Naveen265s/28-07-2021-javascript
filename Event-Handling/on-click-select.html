@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        getCountry = () => {
+            let contry = document.getElementById("selectCountry").value;
+            alert("You are From " + contry);
+        }
+        setColor = () => {
+            let color = document.getElementById("selectColor").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body onload="setColor()">
+    <table>
+        <tr>
+            <td>Select Country</td>
+            <td>
+                <select name="Country DropDown" id="selectCountry" onchange="getCountry()">
+                    <option>India</option>
+                    <option>US</option>
+                    <option>UK</option>
+                    <option>Canada</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Set Color</td>
+            <td>
+                <select name="Color DropDown" id="selectColor" onchange="setColor()">
+                    <option>orange</option>
+                    <option>red</option>
+                    <option>green</option>
+                    <option>blue</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        changeMe = () => {
+            document.images[0].src="Sebastian_Wilson.jpg";
+            document.images[0].width=300;
+            document.images[0].height=300;
+        }
+        RestImg = () => {
+            // document.images[0].src="Chad_Davis.jpg";
+            document.images.src;
+            document.images[0].width=300;
+            document.images[0].height=300;
+        }
+    </script>
+</head>
+<body>
+    <img src="Chad_Davis.jpg" width="300" height="300" onmouseover="changeMe()" onmouseout="RestImg()"/>
+    <input type="button" value="changeMe" onclick="changeMe()"/>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            if(!validateName()){
+                document.getElementById('errName').innerText = "Name Should Contain only Alphabets";
+                event.preventDefault();
+            }
+            function validateName(){
+                let uname = document.getElementById('txtName').value;
+                let pattern = '^[a-zA-Z]{2,10}$';
+                let Regx = new RegExp(pattern);
+                let result = Regx.test(uname);
+                return result;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" onsubmit="validate()">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="txtName"/></td>
+                <td><span id="errName"></span></td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td><input type="number" id="txtAge"/></td>
+                <td><span id="errAge"></span></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="number" id="txtMobile"/></td>
+                <td><span id="errMobile"></span></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="txtEmail"/></td>
+                <td><span id="errEmail"></span></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="txtPwd"/></td>
+                <td><span id="errPwd"></span></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="password" id="txtCPwd"/></td>
+                <td><span id="errEmail"></span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" value="Submit"/></td>
+                <td><input type="button" id="clear" value="Clear"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

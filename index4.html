@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .intro{
+            color: violet;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="intro">React is component based framework</p>
+    <p class="intro">another intro</p>
+    <p name="nameid">html Document by name</p>
+    <p>Javascript is object based</p>
+    <h1 class="intro">Javascript is case sensitive</h1>
+    <script>
+        // let items = document.getElementsByClassName("intro");
+        // let txt = '';
+        // for (let i=0; i<items.length; i++){
+        //     txt += items[i].innerText + '<br>';
+        // }
+        // document.write(txt);
+
+        // let items = document.querySelectorAll("p.intro");
+        // let txt = '';
+        // for (let i=0; i<items.length; i++){
+        //     txt += items[i].innerText + '<br>';
+        // }
+        // document.write(txt);
+        let items = document.getElementsByName("nameid");
+        let txt = '';
+        for (let i=0; i<items.length; i++){
+            txt += items[i].innerText + '<br>';
+        }
+        document.write(txt);
+    </script>
+</body>
+</html>
